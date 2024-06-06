@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("DressageScoreSheet")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+088ae823e66c75be32b2cd4deb9aa69d8575c7b8")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+443014d0c49858c103bea23aa38929364b487a08")]
 [assembly: System.Reflection.AssemblyProductAttribute("DressageScoreSheet")]
 [assembly: System.Reflection.AssemblyTitleAttribute("DressageScoreSheet")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
