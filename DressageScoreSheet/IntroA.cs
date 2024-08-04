@@ -6,31 +6,82 @@ using System.Threading.Tasks;
 
 namespace DressageScoreSheet
 {
-    internal class IntroA //USEF Introductory Test A https://www.usdf.org/docs/showflash/web/tests/2023/2023%20Intro%20A.pdf?t=6/5/2024%207:27:44%20PM
+    internal class IntroA
     {
-        private decimal userInput;
-        public decimal IAMove1 { get; set; } 
-        public decimal IAMove2 { get; set; }
-        public decimal IAMove3 { get; set; }
-        public decimal IAMove4 { get; set; }
-        public decimal IAMove5 { get; set; }
-        public decimal IAMove6 { get; set; }
-        public decimal IAMove7 { get; set; }
-        public decimal IAMove8 { get; set; }   
-        public decimal IAMove9 { get; set; }
-
-        public decimal IAGaits { get; set; }
-        public decimal IAImpulsion { get; set; }
-        public decimal IASubmission { get; set; } //coef x2, need to add this in formula
-        public decimal IAPosition { get; set; }
-        public decimal IAEffectiveness { get;set; }
-        public decimal IAAccuracy { get; set; }
-
-        public int IATotalPoints = 160;
+        public void CalculateIAScore()
+        {
 
 
+            Console.WriteLine("2023 USDF Introductory Level - Test A");
 
-   
-    
+            double[] totalPoints = new double[15];
+            double[] coef = { 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 1, 1, 1, 1 };
+
+            for (int i = 0; i < 15; i++)
+            {
+                Console.WriteLine($"Movement {i + 1}: ");
+
+                string input = Console.ReadLine();
+
+                if (double.TryParse(input, out double pointsValue))
+                {
+
+                    totalPoints[i] = pointsValue;
+
+                }
+                else
+                {
+                    Console.WriteLine("Invalid input. Please enter a valid number.");
+                    i--;
+                }
+
+
+
+            }
+
+
+
+
+
+
+            Console.WriteLine($"Errors: ");
+
+            string inputErrors = Console.ReadLine();
+
+
+
+            if (int.TryParse(inputErrors, out int errorsValue))
+            {
+
+                Console.WriteLine("");
+            }
+            else
+            {
+                Console.WriteLine($"Invalid input.");
+
+            }
+
+
+
+
+
+            double sum = 0;
+
+            for (int i = 0; i < 15; i++)
+            {
+                sum += totalPoints[i] * coef[i];
+
+
+            }
+
+            Console.WriteLine($"\t\t\tTotal points: {sum}\n");
+
+            int maxPoints = 160;
+
+            double percentage = ((sum - errorsValue) / maxPoints) * 100;
+
+
+            Console.WriteLine($"\t\t\tPercentage: {percentage:F3}");
+        }
     }
 }

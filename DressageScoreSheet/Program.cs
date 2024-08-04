@@ -1,72 +1,54 @@
-﻿Console.WriteLine("2023 USDF Introductory Level - Test A");
+﻿using DressageScoreSheet;
 
-double[] totalPoints = new double[15];
-double[] coef = { 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 1, 1, 1, 1 };
+//static void Main()
+    string userInput = string.Empty;
+    
 
-for (int i = 0; i < 15; i++)
-{
-    totalPoints[i] = i;
+    Console.WriteLine("1. 2023 USEF Introductory Level Test A");
+    //Console.WriteLine("2. 2023 USEF Introductory Level Test B");
+    //Console.WriteLine("3. 2023 USEF Introductory Level Test C");
+    Console.WriteLine();
+    Console.WriteLine("4. 2023 USEF Training Level Test 1");
+    //Console.WriteLine("5. 2023 USEF Training Level Test 2");
+    //Console.WriteLine("6. 2023 USEF Training Level Test 3");
+    Console.WriteLine();
+    Console.WriteLine("7. 2023 USEF First Level Test 1");
+    //Console.WriteLine("8. 2023 USEF First Level Test 2");
+    //Console.WriteLine("9. 2023 USEF First Level Test 3");
+    Console.WriteLine();
+    Console.WriteLine("10. 2023 USEF Second Level Test 1");
+    //Console.WriteLine("11. 2023 USEF Second Level Test 2");
+    //Console.WriteLine("12. 2023 USEF Second Level Test 3");
+    Console.WriteLine();
+    Console.WriteLine("13. 2023 USEF Third Level Test 1");
+    //Console.WriteLine("14. 2023 USEF Third Level Test 2");
+    //Console.WriteLine("15. 2023 USEF Third Level Test 3");
+    Console.WriteLine();
+    Console.WriteLine("16. 2023 USEF Fourth Level Test 1");
+    //Console.WriteLine("17. 2023 USEF Fourth Level Test 2");
+    //Console.WriteLine("18. 2023 USEF Fourth Level Test 3");
+    Console.WriteLine();
+    Console.WriteLine("Enter the number of test : ");
 
-    Console.WriteLine($"Movement {i + 1}: ");
+    userInput = Console.ReadLine();
 
-    string input = Console.ReadLine();
-
-    if (double.TryParse(input, out double pointsValue))
+    if (userInput == "1")
     {
-
-        totalPoints[i] = pointsValue;
+        //internal class of Intro A to do the calculation there for that specific test, do this for the rest. 
+        IntroA introA = new IntroA();
+        introA.CalculateIAScore();
 
     }
     else
     {
-        Console.WriteLine("Invalid input");
-        i--;
+        Console.WriteLine("App is still under development. Come back later.");
+        
     }
-
-
-
-}
-
+    
 
 
 
 
-
-Console.WriteLine($"Errors: ");
-
-string inputErrors = Console.ReadLine();
-
-if (int.TryParse(inputErrors, out int errorsValue))
-{
-
-    Console.WriteLine("");
-}
-else
-{
-    Console.WriteLine($"Invalid input");
-}
-
-
-
-
-
-double sum = 0;
-
-for (int i = 0; i < 15; i++)
-{
-    sum += totalPoints[i] * coef[i];
-
-
-}
-
-Console.WriteLine($"\t\t\tTotal points: {sum}\n");
-
-int maxPoints = 160;
-
-double percentage = ((sum - errorsValue) / maxPoints) * 100;
-
-
-Console.WriteLine($"\t\t\tPercentage: {percentage:F3}");
 
 
 
