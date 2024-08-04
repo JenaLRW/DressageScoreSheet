@@ -6,18 +6,18 @@ using System.Threading.Tasks;
 
 namespace DressageScoreSheet
 {
-    internal class IntroA
+    internal class First1
     {
         public void CalculateScore()
         {
 
 
-            Console.WriteLine("2023 USDF Introductory Level - Test A");
+            Console.WriteLine("2023 USDF First Level - Test 1");
 
-            double[] totalPoints = new double[15];
-            double[] coef = { 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 1, 1, 1, 1 };
+            double[] totalPoints = new double[20];
+            double[] coef = { 1,1,1,2,1,2,2,2,1,1,2,1,1,1,1,1,2,2,1,1 };
 
-            for (int i = 0; i < 15; i++)
+            for (int i = 0; i < 20; i++)
             {
                 Console.WriteLine($"Movement {i + 1}: ");
 
@@ -67,7 +67,7 @@ namespace DressageScoreSheet
 
             double sum = 0;
 
-            for (int i = 0; i < 15; i++)
+            for (int i = 0; i < 20; i++)
             {
                 sum += totalPoints[i] * coef[i];
 
@@ -76,12 +76,13 @@ namespace DressageScoreSheet
 
             Console.WriteLine($"\t\t\tTotal points: {sum}\n");
 
-            int maxPoints = 160;
+            int maxPoints = 270;
 
             double percentage = ((sum - errorsValue) / maxPoints) * 100;
 
 
             Console.WriteLine($"\t\t\tPercentage: {percentage:F3}");
         }
+
     }
 }

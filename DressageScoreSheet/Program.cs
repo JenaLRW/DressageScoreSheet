@@ -36,10 +36,45 @@
     {
         //internal class of Intro A to do the calculation there for that specific test, do this for the rest. 
         IntroA introA = new IntroA();
-        introA.CalculateIAScore();
+        introA.CalculateScore();
 
     }
-    else
+    if (userInput == "4")
+    {
+    
+    Training1 training1 = new Training1();
+    training1.CalculateScore();
+
+    }
+    if (userInput == "7")
+{
+
+    First1 first1 = new First1();
+    first1.CalculateScore();
+
+}
+if (userInput == "10")
+{
+
+    Second1 second1 = new Second1();
+    second1.CalculateScore();
+
+}
+if (userInput == "13")
+{
+
+    Third1 third1 = new Third1();
+    third1.CalculateScore();
+
+}
+if (userInput == "16")
+{
+
+    Fourth1 fourth1 = new Fourth1();
+    fourth1.CalculateScore();
+
+}
+else
     {
         Console.WriteLine("App is still under development. Come back later.");
         
