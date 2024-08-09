@@ -11,10 +11,10 @@
 
         public async Task<List<?????? >> GetHorses()
         {
-            var horses = await _httpClient.GetFromJsonAsync<List<HorseModel>>("");
+            var horses = await _httpClient.GetFromJsonAsync<List<?????>>("");
             return horses;
         }
     }
 }
-    }
-}
+    
+
