@@ -13,6 +13,8 @@ namespace DressageScoreSheet
         public double[] Coef { get; internal set; }
         public int Errors { get; internal set; }
         public double[] TotalPoints { get; internal set; }
+
+        public double Percentage { get; internal set; }
         
     }
 }
